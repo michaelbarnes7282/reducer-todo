@@ -28,6 +28,11 @@ export const reducer = (state, action) => {
             }
             return item;
         })
+
+        case 'CLEAR_DONE':            
+            return state.filter(item => !item.completed)
+            
+            
         
         default:
         return state;

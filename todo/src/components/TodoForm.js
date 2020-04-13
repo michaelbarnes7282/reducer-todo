@@ -32,7 +32,9 @@ function TodoForm() {
                     Add
                     </button>
             </div>
-            <button className='clear-btn'>
+            <button className='clear-btn'
+                    onClick={() => dispatch({ type: 'CLEAR_DONE' })}
+                    >
                 Clear Done
             </button>
             {state.map(todo => (
